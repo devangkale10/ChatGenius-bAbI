@@ -4,7 +4,7 @@ An innovative question-and-answer chatbot developed using the cutting-edge bAbI 
 
 This is an innovative question-and-answer chatbot developed using the bAbI dataset from Meta. This repository houses a sophisticated AI model designed to understand and respond to a wide array of questions with remarkable accuracy. Leveraging the structured yet diverse nature of the bAbI dataset, this chatbot offers an interactive learning and querying experience that mimics human-like conversation patterns.
 
-## Features
+# Features
 
 ### Why chat with ChatGenius-bAbI?
 
@@ -12,7 +12,7 @@ This is an innovative question-and-answer chatbot developed using the bAbI datas
 - **Chat Away**: From wondering about the weather to unraveling riddles, this chatbot loves a good chat across any topic you can think of.
 - **Interactive Learning**: ChatGenius-bAbI is designed to learn from every interaction, making it smarter and more intuitive with every conversation.
 
-## Model Architecture
+### Model Architecture
 
 The model takes a discrete set of inputs x1, x2, ..., xT that are stored in memory and a query q. The model processes the inputs and the query to produce an answer a. The model is trained end-to-end with backpropagation.
 Each of the x, q, a contain symbols coming from a dictionary with V words
@@ -22,3 +22,13 @@ Each of the x, q, a contain symbols coming from a dictionary with V words
 - **Input Memory Representation**: The input memory is represented as a sequence of vectors x1, x2, ..., xT, converted into memory vectors m1, m2, ..., mT.
 - **Output Memory Representation**: Each x has a corresponding output vector c.
 - **The Output**: The sum of the output vector o and the input embedding u is passed through a final weight matrix and a softmax to product predicted label a.
+
+# Credits
+
+I'll be working with the Babi Data Set from Facebook Research.
+
+- Full Details: https://github.com/facebookarchive/bAbI-tasks?tab=readme-ov-file
+
+- Jason Weston, Antoine Bordes, Sumit Chopra, Tomas Mikolov, Alexander M. Rush,
+  "Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks",
+  http://arxiv.org/abs/1502.05698
