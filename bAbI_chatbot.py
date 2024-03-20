@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-# Question and Answer Chat Bots
+# Question and Answer Chat Bot
 
 ## Loading the Data
 
@@ -55,8 +55,7 @@ vocab = set()
 all_data = test_data + train_data
 
 for story, question, answer in all_data:
-    # In case you don't know what a union of sets is:
-    # https://www.programiz.com/python-programming/methods/set/union
+
     vocab = vocab.union(set(story))
     vocab = vocab.union(set(question))
 
@@ -209,7 +208,7 @@ from keras.models import Model, Sequential
 
 """### Placeholders for Inputs
 
-Recall we technically have two inputs, stories and questions. So we need to use placeholders. `Input()` is used to instantiate a Keras tensor.
+We technically have two inputs, stories and questions. So we need to use placeholders. `Input()` is used to instantiate a Keras tensor.
 
 """
 
@@ -218,7 +217,7 @@ question = Input((max_question_len,))
 
 """### Building the Networks
 
-To understand why we chose this setup, make sure to read the paper we are using:
+To understand why I chose this setup, make sure to read the paper I am using:
 
 * Sainbayar Sukhbaatar, Arthur Szlam, Jason Weston, Rob Fergus,
   "End-To-End Memory Networks",
@@ -360,12 +359,12 @@ print("Probability of certainty was: ", pred_results[0][val_max])
 
 """## Writing Your Own Stories and Questions
 
-Remember you can only use words from the existing vocab
+   You can only use words from the existing vocab
 """
 
 vocab
 
-# Note the whitespace of the periods
+
 my_story = "John left the kitchen . Sandra dropped the football in the garden ."
 my_story.split()
 
